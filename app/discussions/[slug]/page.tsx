@@ -12,7 +12,6 @@ type DiscussionPageProps = {
 
 const DiscussionSinglePage = async ({ params }: DiscussionPageProps) => {
   const { slug } = await params;
-  console.log('slug', slug);
 
   const rawPost = await getDiscussionPostBySlug(slug);
 

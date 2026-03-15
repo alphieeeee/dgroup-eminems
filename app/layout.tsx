@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../styles/globals.scss";
+import "./tailwind.css";
 import GradientBG from "./components/GradientBG";
 import TransitionLayout from "./components/TransitionLayout";
 
