@@ -43,23 +43,23 @@ const DiscussionThumbnails = async () => {
               )}
 
               <h2
-                className="text-4xl font-bold"
+                className="text-4xl font-bold text-center"
                 style={{ color: "#00C0D7" }}
               >
                 {post.discussionTitle || post.title}
               </h2>
 
               {post.discussionSubtitle && (
-                <h3 className="mt-2 text-2xl">
+                <h3 className="mt-2 text-2xl text-center">
                   {post.discussionSubtitle}
                 </h3>
               )}
 
-              {post.discussionDescription && (
+              {/* {post.discussionDescription && (
                 <p className="mt-4 max-w-3xl leading-7">
                   {post.discussionDescription}
                 </p>
-              )}
+              )} */}
             </article>
           </Link>
         ))}
