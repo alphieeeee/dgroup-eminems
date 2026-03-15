@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "../styles/globals.scss";
+import GradientBG from "./components/GradientBG";
+import TransitionLayout from "./components/TransitionLayout";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,7 +29,10 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <GradientBG />
+        <TransitionLayout>
+          {children}
+        </TransitionLayout>
       </body>
     </html>
   );
