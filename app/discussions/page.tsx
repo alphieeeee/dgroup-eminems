@@ -2,7 +2,9 @@ import React from 'react'
 
 const DiscussionPage: React.FC = () => {
   return (
-    <div>Discussion Page</div>
+    <main className={`relative mx-auto w-[min(90vw,1920px)]`}>
+        <div>Discussion Page</div>
+    </main>
   )
 }
 
