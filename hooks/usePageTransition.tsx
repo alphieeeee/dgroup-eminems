@@ -3,7 +3,7 @@ import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.share
 
 export const usePageTransition = () => {
 	// ANIM IN
-	const pageTransitionIn = (elem: any) => {
+	const pageTransitionIn = () => {
 		const mainEl = document.getElementById('main-container')
 		const overlayEl = document.querySelectorAll('.transition-overlay')
 		if (mainEl && overlayEl.length) {
@@ -13,7 +13,7 @@ export const usePageTransition = () => {
 			gsap.to(overlayEl, { duration: 0.6, autoAlpha: 0, ease: 'sine.out', force3D: true })
 			gsap.to(mainEl, { duration: 0.6, autoAlpha: 1, ease: 'sine.out', force3D: true })
 		}
-		console.log(elem);
+    console.log('page transition in');
 	}
 	// ANIM OUT
 	const pageTransitionOut = (
@@ -36,6 +36,7 @@ export const usePageTransition = () => {
         }
       })
     }
+    console.log('page transition out');
   }
 
 	return {

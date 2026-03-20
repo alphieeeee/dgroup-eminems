@@ -1,6 +1,8 @@
 'use client'
 import React, { useRef } from 'react'
 import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { ScrollSmoother } from 'gsap/ScrollSmoother';
 import { useGSAP } from "@gsap/react";
 import { usePageTransition } from '../../hooks/usePageTransition';
 
@@ -8,15 +10,24 @@ interface TransitionLayoutProps {
   children: React.ReactNode;
 }
 
+gsap.registerPlugin(useGSAP, ScrollTrigger, ScrollSmoother);
+
 const TransitionLayout: React.FC<TransitionLayoutProps> = ({
     children
   }) => {
     const { pageTransitionIn } = usePageTransition();
     gsap.registerPlugin(useGSAP);
+    const smoother = useRef<ScrollSmoother | null>(null);
     const smoothWrapper = useRef<HTMLDivElement>(null);
     
     useGSAP(() => {
-      pageTransitionIn('test');
+      if (!smoothWrapper.current) return;
+
+      smoother.current = ScrollSmoother.create({
+        smooth: 2,
+        effects: true,
+      });
+      pageTransitionIn();
     }, { scope: smoothWrapper });
 
   return (
