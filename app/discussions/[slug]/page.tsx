@@ -29,14 +29,14 @@ const DiscussionSinglePage = async ({ params }: DiscussionPageProps) => {
       className={`${styles.container} relative w-full`}
       style={{
         backgroundColor: post.backgroundColor || "transparent",
-        color: post.contentTextColor || "#fff",
+        color: post.contentTextColor || "#979797",
       }}
     >
-      <section className={`relative mx-auto w-[min(90vw,1920px)] flex min-h-screen items-center justify-center flex-col py-[5vw]`}>
-        <div className={`w-full max-w-3xl min-w-0 relative hero-section pb-[5vw]`}>
+      <section className={`relative mx-auto w-[min(90vw,1920px)] flex min-h-screen items-center justify-center flex-col`}>
+        <div className={`w-full max-w-3xl min-w-0 relative hero-section py-[5vw]`}>
           <h1
-            className="text-center text-4xl font-bold md:text-4xl lg:text-5xl pb-[2rem]"
-            style={{ color: post.titleTextColor || "#fff" }}
+            className="max-w-[600px] lg:max-w-[575px] mx-auto text-center text-6xl font-bold pb-[2rem]"
+            style={{ color: post.titleTextColor || "#00C0D7" }}
           >
             {post.discussionTitle || post.title}
           </h1>
@@ -58,15 +58,15 @@ const DiscussionSinglePage = async ({ params }: DiscussionPageProps) => {
           </div>
           <article className="relative space-y-5">
             {post.discussionSubtitle && (
-              <h2 className="text-xl md:text-2xl">{post.discussionSubtitle}</h2>
+              <p className="text-xl">{post.discussionSubtitle}</p>
             )}
             {post.discussionDescription && (
-              <p className="leading-7 md:text-lg break-words">{post.discussionDescription}</p>
+              <p className="leading-7 text-lg break-words">{post.discussionDescription}</p>
             )}
           </article>
         </div>
 
-        {hasFirstSection && (<div className={`w-full max-w-3xl min-w-0 relative first-section pb-[3vw]`}>
+        {hasFirstSection && (<div className={`w-full flex flex-col justify-center max-w-3xl min-w-0 relative first-section py-[5vw]`}>
           {post.firstSectionImage && (
             <div className="relative aspect-video w-full overflow-hidden rounded-2xl mb-[2rem]">
               <Image
@@ -80,15 +80,15 @@ const DiscussionSinglePage = async ({ params }: DiscussionPageProps) => {
           )}
           <article className="space-y-4">
             {post.firstSectionHeading && (
-              <h3
-                className="text-3xl font-semibold"
-                style={{ color: post.titleTextColor || "#fff" }}
+              <h2
+                className="text-5xl font-semibold"
+                style={{ color: post.titleTextColor || "#00C0D7" }}
               >
                 {post.firstSectionHeading}
-              </h3>
+              </h2>
             )}
             {post.firstSectionContent && (
-              <div className="whitespace-pre-line leading-7 break-words">
+              <div className="text-lg whitespace-pre-line leading-7 break-words">
                 {post.firstSectionContent}
               </div>
             )}
@@ -96,7 +96,7 @@ const DiscussionSinglePage = async ({ params }: DiscussionPageProps) => {
         </div>
         )}
 
-        {hasSecondSection && (<div className={`w-full max-w-3xl min-w-0 relative second-section pb-[5vw]`}>
+        {hasSecondSection && (<div className={`w-full flex flex-col justify-center max-w-3xl min-w-0 relative second-section py-[5vw]`}>
           {post.secondSectionImage && (
             <div className="relative aspect-video w-full overflow-hidden rounded-2xl mb-[2rem]">
               <Image
@@ -110,12 +110,12 @@ const DiscussionSinglePage = async ({ params }: DiscussionPageProps) => {
           )}
           <article className="space-y-4">
             {post.secondSectionHeading && (
-              <h3
-                className="text-3xl font-semibold"
-                style={{ color: post.titleTextColor || "#fff" }}
+              <h2
+                className="text-5xl font-semibold"
+                style={{ color: post.titleTextColor || "#00C0D7" }}
               >
                 {post.secondSectionHeading}
-              </h3>
+              </h2>
             )}
             {post.secondSectionContent && (
               <div className="whitespace-pre-line leading-7 break-words">
@@ -126,7 +126,7 @@ const DiscussionSinglePage = async ({ params }: DiscussionPageProps) => {
         </div>
         )}
 
-        {hasThirdSection && (<div className={`w-full max-w-3xl min-w-0 relative third-section pb-[5vw]`}>
+        {hasThirdSection && (<div className={`w-full flex flex-col justify-center max-w-3xl min-w-0 relative third-section py-[5vw]`}>
           {post.thirdSectionImage && (
             <div className="relative aspect-video w-full overflow-hidden rounded-2xl mb-[2rem]">
               <Image
@@ -140,12 +140,12 @@ const DiscussionSinglePage = async ({ params }: DiscussionPageProps) => {
           )}
           <article className="space-y-4">
             {post.thirdSectionHeading && (
-              <h3
-                className="text-3xl font-semibold"
-                style={{ color: post.titleTextColor || "#fff" }}
+              <h2
+                className="text-5xl font-semibold"
+                style={{ color: post.titleTextColor || "#00C0D7" }}
               >
                 {post.thirdSectionHeading}
-              </h3>
+              </h2>
             )}
             {post.thirdSectionContent && (
               <div className="whitespace-pre-line leading-7 break-words">
@@ -156,14 +156,14 @@ const DiscussionSinglePage = async ({ params }: DiscussionPageProps) => {
         </div>
         )}
 
-        {post.discussionVideo && (<div className={`w-full max-w-3xl min-w-0 relative discussion-video pb-[5vw]`}>
+        {post.discussionVideo && (<div className={`w-full flex flex-col justify-center max-w-3xl min-w-0 relative discussion-video py-[5vw]`}>
           <article className="space-y-4">
-            <h3
-              className="text-3xl font-semibold"
-              style={{ color: post.titleTextColor || "#fff" }}
+            <h2
+              className="text-5xl font-semibold"
+              style={{ color: post.titleTextColor || "#00C0D7" }}
             >
               Discussion Video
-            </h3>
+            </h2>
             <div
               className="prose prose-invert max-w-none aspect-video"
               dangerouslySetInnerHTML={{ __html: post.discussionVideo }}
@@ -172,14 +172,14 @@ const DiscussionSinglePage = async ({ params }: DiscussionPageProps) => {
         </div>
         )}
 
-        {post.sundayService && (<div className={`w-full max-w-3xl min-w-0 relative sunday-video`}>
-          <article>
-            <h3
-              className="text-3xl font-semibold"
-              style={{ color: post.titleTextColor || "#fff" }}
+        {post.sundayService && (<div className={`w-full flex flex-col justify-center max-w-3xl min-w-0 relative sunday-video py-[5vw]`}>
+          <article className="space-y-4">
+            <h2
+              className="text-5xl font-semibold"
+              style={{ color: post.titleTextColor || "#00C0D7" }}
             >
               Sunday Service
-            </h3>
+            </h2>
             <div
               className="prose prose-invert max-w-none aspect-video"
               dangerouslySetInnerHTML={{ __html: post.sundayService }}
