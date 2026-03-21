@@ -7,3 +7,8 @@ export function formatDate(dateString?: string | null): string {
     year: "numeric",
   });
 }
+
+export function toLower(value: unknown): string {
+  if (typeof value !== 'string') return '';
+  return value.toLowerCase().trim();
+}
