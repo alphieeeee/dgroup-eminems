@@ -3,7 +3,7 @@ import type {
   NormalizedDiscussionPost,
   NormalizedDiscussionThumbnail
 } from "@/types/discussion";
-import { formatDate } from "@/utils/date";
+import { formatDate } from "@/utils/helpers";
 
 function forceHttp(url?: string | null): string {
   if (!url) return "";

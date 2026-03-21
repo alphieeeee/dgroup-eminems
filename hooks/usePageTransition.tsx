@@ -1,13 +1,13 @@
 import gsap from "gsap";
 import { AppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 
+// This remains a hook, might use react state or hooks in the future for more complex transition logic
 export const usePageTransition = () => {
 	// ANIM IN
 	const pageTransitionIn = () => {
 		const mainEl = document.getElementById('main-container')
 		const overlayEl = document.querySelectorAll('.transition-overlay')
 		if (mainEl && overlayEl.length) {
-			// const transitionInTL = gsap.timeline({ paused: true, defaults: { ease: 'sine.inOut' } })
 			gsap.timeline({ paused: true, defaults: { ease: 'sine.inOut' } })
 			gsap.set(mainEl, { autoAlpha: 0 })
 			gsap.to(overlayEl, { duration: 0.6, autoAlpha: 0, ease: 'sine.out', force3D: true })
