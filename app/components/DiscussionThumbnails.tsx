@@ -44,8 +44,15 @@ const DiscussionThumbnails = async () => {
                   onScroll={false}
                 >
                   <div className="relative mb-3 w-full overflow-hidden rounded-xl aspect-video">
-                    <Image
+                    {/* <Image
                       src={post.discussionThumbnail}
+                      alt={post.discussionTitle || post.title}
+                      fill
+                      unoptimized
+                      className="object-cover"
+                    /> */}
+                    <Image
+                      src={`/placeholder.png`}
                       alt={post.discussionTitle || post.title}
                       fill
                       unoptimized
