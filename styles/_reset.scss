@@ -23,9 +23,13 @@ svg {
   max-width: 100%;
 }
 
-/* Avoid stretched images */
 img {
   height: auto;
+}
+
+svg {
+  width: 100%;
+  height: 100%;
 }
 
 /* Inherit typography for form controls */
@@ -38,19 +42,19 @@ select {
 }
 
 /* Remove default spacing */
-// h1,
-// h2,
-// h3,
-// h4,
-// h5,
-// h6,
-// p,
-// ul,
-// ol,
-// figure,
-// blockquote {
-//   margin: 0;
-// }
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote {
+  margin: 0;
+}
 
 /* Lists */
 ul,
