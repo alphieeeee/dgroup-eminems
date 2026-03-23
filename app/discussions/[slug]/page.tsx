@@ -358,6 +358,43 @@ const DiscussionSinglePage = async ({ params }: DiscussionPageProps) => {
           </article>
         </div>
         )}
+        {post.groupPhoto && (<div className={`w-full flex flex-col justify-center max-w-3xl min-w-0 relative sunday-video py-[5vw]`}>
+          <article className="space-y-4">
+            <AnimPanning
+              duration={0.8}
+              direction={'up'}
+              from={0}
+              to={0}
+              fade={'in'}
+            >
+              <h2
+                className="text-5xl font-semibold"
+                style={{ color: post.titleTextColor || "#00C0D7" }}
+              >
+                Group Photo
+              </h2>
+            </AnimPanning>
+            <AnimPanning
+
+                duration={0.8}
+                direction={'up'}
+                from={0}
+                to={0}
+                fade={'in'}
+              >
+              <div className="relative aspect-video w-full overflow-hidden rounded-2xl mb-[2rem]">
+                <Image
+                  src={`/group-pic-${slug}.png`}
+                  alt={`group-pic-${slug}.png`}
+                  fill
+                  unoptimized
+                  className="object-cover"
+                />
+              </div>
+            </AnimPanning>
+          </article>
+        </div>
+        )}
       </section>
     </main>
   );
