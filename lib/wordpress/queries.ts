@@ -72,6 +72,11 @@ query GetDiscussionPostBySlug($slug: ID!) {
           sourceUrl
         }
       }
+      groupPhoto {
+        node {
+          sourceUrl
+        }
+      }
       discussionVideo
       sundayService
       titleTextColor

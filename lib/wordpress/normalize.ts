@@ -76,6 +76,7 @@ export function normalizeDiscussionPost(
 
     discussionVideo: fields?.discussionVideo ?? "",
     sundayService: fields?.sundayService ?? "",
+    groupPhoto: forceHttp(fields?.groupPhoto?.node?.sourceUrl),
     titleTextColor: fields?.titleTextColor ?? "",
     contentTextColor: fields?.contentTextColor ?? "",
     backgroundColor: fields?.backgroundColor ?? "",

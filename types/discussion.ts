@@ -26,6 +26,7 @@ export type DiscussionFields = {
 
   discussionVideo?: string | null;
   sundayService?: string | null;
+  groupPhoto?: ImageNode;
 
   titleTextColor?: string | null;
   contentTextColor?: string | null;
@@ -84,7 +85,7 @@ export type NormalizedDiscussionPost = {
 
   discussionVideo: string;
   sundayService: string;
-
+  groupPhoto: string;
   titleTextColor: string;
   contentTextColor: string;
   backgroundColor: string;
