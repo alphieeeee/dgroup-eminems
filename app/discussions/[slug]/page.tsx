@@ -67,7 +67,7 @@ const DiscussionSinglePage = async ({ params }: DiscussionPageProps) => {
               >
                 <div className="relative mx-auto aspect-video overflow-hidden rounded-2xl mb-2">
                   <Image
-                    src={`/placeholder.png`}
+                    src={`/thumb-${slug}.png`}
                     alt={post.discussionTitle || post.title}
                     fill
                     unoptimized

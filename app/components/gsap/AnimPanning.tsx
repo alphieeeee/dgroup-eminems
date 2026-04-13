@@ -3,6 +3,8 @@ import React, { useRef, RefObject } from 'react';
 import { useGSAP } from '@gsap/react'
 import { animPanning } from '@/animations/animPanning';
 
+type AnimDirection = 'left' | 'right' | 'up' | 'down';
+
 interface AnimPanningProps {
   id?: string;
   className?: string;
@@ -14,7 +16,7 @@ interface AnimPanningProps {
   animOnce?: boolean;
   onScroll?: boolean;
   children?: React.ReactNode;
-  direction: 'left' | 'right' | 'up' | 'down';
+  direction: AnimDirection;
   from: number;
   to: number,
   fade?: 'in' | 'out';
