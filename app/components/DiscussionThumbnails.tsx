@@ -52,7 +52,7 @@ const DiscussionThumbnails = async () => {
                       className="object-cover"
                     /> */}
                     <Image
-                      src={`/placeholder.png`}
+                      src={`/thumb-${post.slug}.png`}
                       alt={post.discussionTitle || post.title}
                       fill
                       unoptimized
